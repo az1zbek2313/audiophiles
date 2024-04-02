@@ -1,13 +1,13 @@
+// Login.jsx
 import React, { useRef, useState } from 'react'
 import icon from "../../assets/image/home/image-removebg-preview-headphones.svg"
 import styles from "./style.module.css"
 import { useGoogleLogin } from '@react-oauth/google';
-// import { jwtDecode } from "jwt-decode";
 import { useNavigate, Link } from 'react-router-dom';
 import { Alert } from '@mui/material';
 import axios from 'axios';
 
-function Login() {
+function Login({ setToken }) {
   const [loading, setLoading] = useState(null)
   const [error, setError] = useState(false);
   const [words, setWords] = useState('');
@@ -57,10 +57,11 @@ function Login() {
       })
        .then(res => res.json())
        .then(data => {
-        if (data.id) {
-          localStorage.setItem('token', JSON.stringify(data.accessToken));
-          navigate('/')
-        }
+          if (data.id) {
+            localStorage.setItem('token', JSON.stringify(data.accessToken));
+            setToken(data.accessToken);
+            navigate('/')
+          }
           if (data.message == "User Not found.") {
             setError(true);
             setWords(data.message);
@@ -87,6 +88,7 @@ function Login() {
       try {
         const res = await axios.get(
           localStorage.setItem("token", JSON.stringify(response.code)),
+          setToken(response.code),
           navigate("/")
         )
         console.log(res);

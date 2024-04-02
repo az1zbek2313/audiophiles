@@ -168,7 +168,13 @@ function Checkout() {
       zipCode.current.value = ''
       city.current.value = ''
       country.current.value = ''
-      setError7(false)
+      setError1(false);
+      setError2(false);
+      setError3(false);
+      setError4(false);
+      setError5(false);
+      setError6(false);
+      setError7(false);
       console.log(user);
       window.scrollTo({
         top: 0,
@@ -180,6 +186,36 @@ function Checkout() {
 
   return (
     <div className={!add ? styles.wrapper : styles.wrapper1}>
+      <header className={styles.header}>
+        <nav className={styles.navbar}>
+          <Link className={styles.logo}>audiophile</Link>
+          <ul className={styles.listGroup}>
+            <li className={styles.list}>
+              <Link className={styles.link} to={"/"}>
+                Home
+              </Link>
+            </li>
+            <li className={styles.list}>
+              <Link className={styles.link} to={"/headphones"}>
+                Headphones
+              </Link>
+            </li>
+            <li className={styles.list}>
+              <Link className={styles.link} to={"/speakers"}>
+                Speakers
+              </Link>
+            </li>
+            <li className={styles.list}>
+              <Link className={styles.link} to={"/earphones"}>
+                Earphones
+              </Link>
+            </li>
+          </ul>
+          <Link>
+            <i className={`fa-solid fa-cart-shopping ${styles.cart}`}></i>
+          </Link>
+        </nav>
+      </header>
 
       <main className={styles.main}>
       {
@@ -308,7 +344,66 @@ function Checkout() {
           </div>
         </div>
       </main>
-
+      
+      <footer className={styles.footer}>
+        <div className={styles.footerContainer}>
+          <nav className={styles.navbar}>
+            <Link className={styles.logo}>audiophile</Link>
+            <ul className={styles.listGroup}>
+              <li className={styles.list}>
+                <Link className={styles.link} to={"/"}>
+                  Home
+                </Link>
+              </li>
+              <li className={styles.list}>
+                <Link className={styles.link} to={"/headphones"}>
+                  Headphones
+                </Link>
+              </li>
+              <li className={styles.list}>
+                <Link className={styles.link} to={"/speakers"}>
+                  Speakers
+                </Link>
+              </li>
+              <li className={styles.list}>
+                <Link className={styles.link} to={"/earphones"}>
+                  Earphones
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <div className={styles.footerDiv}>
+            <section className={styles.footerText}>
+              <p className={styles.text}>
+                Audiophile is an all in one stop to fulfill your audio needs.
+                We're a small team of music lovers and sound specialists who are
+                devoted to helping you get the most out of personal audio. Come
+                and visit our demo facility - we’re open 7 days a week.
+              </p>
+              <span className={styles.span}>
+                Copyright 2021. All Rights Reserved
+              </span>
+            </section>
+            <article className={styles.icons}>
+              <Link>
+                <i
+                  className={`fa-brands fa-square-facebook fa-fade ${styles.iconn}`}
+                ></i>
+              </Link>
+              <Link>
+                <i
+                  className={`fa-brands fa-twitter fa-fade ${styles.iconn}`}
+                ></i>
+              </Link>
+              <Link>
+                <i
+                  className={`fa-brands fa-instagram fa-fade ${styles.iconn}`}
+                ></i>
+              </Link>
+            </article>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

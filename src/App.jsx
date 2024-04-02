@@ -1,3 +1,4 @@
+// App.jsx
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import SignUp from "./pages/SignUp"
 import Login from "./pages/Login"
@@ -11,25 +12,24 @@ import './App.css'
 import Layout from './Layout/Layout';
 import { useEffect, useState } from 'react';
 
-
-function ProtectedRoute({children, redirectTo="/login", isAuthenticated}) {
+function ProtectedRoute({ children, redirectTo = "/login", isAuthenticated }) {
   const navigate = useNavigate();
 
-  if (!isAuthenticated) {
-    navigate(redirectTo);
-  } 
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate(redirectTo);
+    }
+  }, [isAuthenticated, navigate, redirectTo]);
 
   return children;
 }
 
 function App() {
-  const [token, setToken] = useState('');
+  const [token, setToken] = useState(localStorage.getItem('token') || '');
 
   useEffect(() => {    
-    if (localStorage.getItem('token')) {
-      setToken(localStorage.getItem('token'));
-    } else {
-      setToken(false)
+    if (!localStorage.getItem('token')) {
+      setToken('');
     }
   }, [])
 
@@ -38,8 +38,7 @@ function App() {
       <Routes>
         {/* Public Routes */}
         <Route path='/registr' element={<SignUp/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
-        
+        <Route path='/login' element={<Login setToken={setToken} />}></Route>
 
         {/* Protected Routes */}
         <Route element={<Layout/>}>
@@ -68,12 +67,12 @@ function App() {
                 <About></About>
             </ProtectedRoute>
           }></Route>
-          <Route path='/checkout/:id' element={
+        </Route>        
+        <Route path='/checkout/:id' element={
             <ProtectedRoute isAuthenticated={token ? true : false}>
                 <Checkout></Checkout>
             </ProtectedRoute>
           }></Route>
-        </Route>
       </Routes> 
     </>
   )
