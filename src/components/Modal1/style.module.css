@@ -1,0 +1,161 @@
+.summary{
+    position: absolute;
+    z-index: 1000;
+    right: calc((100% - 1110px) / 2);
+    top: 120px;
+    border-radius: 8px;
+    background: white;
+    width: 377px;
+    padding: 32px;
+}
+.summaryTitles{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.summaryTitle{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1.29px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.summaryRemove{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-decoration-line: underline;
+    opacity: 0.5;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.summaryRemove:hover{
+    color: rgb(216, 125, 74);
+}
+.summaryItems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+.ItemsPrimary{
+    max-width: 155px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+}
+.summaryImage{
+    padding: 13px;
+    border-radius: 8px;
+    background: rgb(241, 241, 241);
+    width: 64px;
+    height: 64px;
+}
+.summaryImage img{
+    width: 36.19px;
+    height: 40px;
+}
+.summaryDesc{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+}
+.ItemTitle{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.ItemText{
+    opacity: 0.5;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.ItemAmount{
+    opacity: 0.5;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: right;
+}
+.summaryPrices{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.summaryPrice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+.summaryPrice .PriceTitle{
+    color: rgb(0, 0, 0);
+}
+.PriceText{
+    opacity: 0.5;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.PriceTitle{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: right;
+    text-transform: uppercase;
+}
+.summaryButton{
+    width: 100%;
+    border: none;
+    padding: 15px 60px;
+    background: rgb(216, 125, 74);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.summaryButton:hover{
+    background: rgb(251, 175, 133);
+}
+
+@media screen and (max-width:1380px) {
+    .summary{
+        padding: 20px 32px;
+    }
+    .summaryItems{
+        margin-top: 18px;
+        margin-bottom: 20px;
+    }
+    .summaryPrice{
+        margin-top: 18px;
+        margin-bottom: 20px;
+    }
+}

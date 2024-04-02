@@ -1,0 +1,221 @@
+.hero{
+    background: rgb(14, 14, 14);
+}
+.heroContainer{
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 2px solid hsla(0, 0%, 100%, 0.4);
+}
+.heroText{
+    width: 396px;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    
+}
+.heroSpan{
+    color: rgb(255, 255, 255);
+    opacity: 0.5;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 10px;
+    margin-bottom: 24px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.heroTitle{
+    color: white;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.heroText{
+    opacity: 0.75;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    width: 350px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+.heroButton{
+    padding: 15px 30px;
+    background: rgb(216, 125, 74);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.heroButton:hover{
+    background: rgb(251, 175, 133);
+}
+.heroImage{
+    background-image: url('../../assets/image/home/Bitmap-hero-speaker.jpeg');
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    object-fit: scale-down;
+    background-position-y:-120px;
+    background-position-x:-40px;
+    width: 58%;
+    height: 600px;
+}
+.homePage{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.ZX9{
+    border-radius: 8px;
+    background: rgb(216, 125, 74);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+.zx9Image{
+    width: 410.23px;
+    margin-left: 110px;
+    margin-top: 80px;
+    height: 493px;
+    background-image: url('../../assets/image/home/image-removebg-preview-big-speaker1.svg');
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    object-fit: scale-down;
+    background-position-y:28px;
+}
+.zx9Text{
+    width: 350px;
+    margin-right: 90px;
+}
+.zx9Title{
+    width: 260px;
+    margin-bottom: 24px;
+    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.zx9Desc{
+    opacity: 0.75;
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.zx9Button{
+    background: rgb(0, 0, 0);
+    padding: 15px 30px;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.zx9Button:hover{
+    background: rgb(76, 76, 76);
+}
+.ZX7{
+    height: 320px;
+    background-image: url('../../assets/image/home/image-removebg-preview-big-speaker2.svg');
+    background-position-y:-480px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    object-fit: scale-down;
+}
+.zx7Text{
+    padding-top:100px;
+    margin-left: 95px;
+}
+.zx7Title{
+    margin-bottom: 32px;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.zx7Button{
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    background:transparent;
+    padding: 15px 33px;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.zx7Button:hover{
+    background:rgb(0, 0, 0);
+    color: white;
+}
+.YX1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    width: 100%;
+}
+.yx1Image{
+    width: 48.5%;
+    height: 320px;
+    background-image: url('../../assets/image/home/image-removebg-preview-big-earphones1.svg');
+    background-repeat: no-repeat;
+    /* background-size:cover; */
+    background-position-y:-320px;
+    background-position-x:-80px;
+    border-radius: 5px;
+    object-fit: scale-down;
+}
+.yx1Text{
+    width: 48.5%;
+    height: 320px;
+    border-radius: 8px;
+    background: rgb(241, 241, 241);
+    padding-top:100px;
+    padding-left: 95px;
+}
+.yx1Title{
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+}

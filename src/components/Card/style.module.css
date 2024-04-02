@@ -1,0 +1,70 @@
+.card{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 160px;
+}
+.image{
+    width: 50%;
+    height: 560px;
+    border-radius: 8px;
+    background: rgb(241, 241, 241);
+}
+.img{
+    margin-left: 94px;
+    margin-top: 65px;
+}
+.heroTexts{
+    width: 445px;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    
+}
+.heroSpan{
+    color: rgb(216, 125, 74);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.heroTitle{
+    margin-top: 16px;
+    margin-bottom: 32px;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 1.43px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.heroText{
+    opacity: 0.75;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+.heroButton{
+    padding: 15px 30px;
+    background: rgb(216, 125, 74);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.heroButton:hover{
+    background: rgb(251, 175, 133);
+}

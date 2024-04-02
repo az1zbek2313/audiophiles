@@ -1,0 +1,18 @@
+.main{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.hero{
+    background: rgb(0, 0, 0);
+}
+.title{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 1.43px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 98px;
+    padding-bottom:98px;
+}
