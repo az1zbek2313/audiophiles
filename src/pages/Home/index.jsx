@@ -22,10 +22,10 @@ function Home() {
   }
   
   return (
-    <>
+    <>  
       <div className={styles.hero}>
         <div className={styles.heroContainer}>
-          <div className={styles.heroText}>
+          <div className={styles.heroTexts}>
             <span className={styles.heroSpan}>NEW PRODUCT</span>
             <h2 className={styles.heroTitle}>XX99 Mark II Headphones</h2>
             <p className={styles.heroText}>
@@ -41,7 +41,9 @@ function Home() {
         <CardSpeakers />
         <section className={styles.sections}>
           <div className={styles.ZX9}>
-            <div className={styles.zx9Image}></div>
+            <div className={styles.zx9Image}>
+
+            </div>
             <div className={styles.zx9Text}>
               <h2 className={styles.zx9Title}>ZX9 SPEAKER</h2>
               <p className={styles.zx9Desc}>

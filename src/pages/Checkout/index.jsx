@@ -25,6 +25,8 @@ function Checkout() {
   const [error5, setError5] = useState(false);
   const [error6, setError6] = useState(false);
   const [error7, setError7] = useState(false);
+  const [error8, setError8] = useState(false);
+  const [error9, setError9] = useState(false);
   const name = useRef();
   const email = useRef();
   const phoneNumber = useRef();
@@ -34,6 +36,8 @@ function Checkout() {
   const country = useRef();
   const payM = useRef();
   const payC = useRef();
+  const cartNum1 = useRef();
+  const cartNum2 = useRef();
 
   function validate(name, email, phoneNumber, address, zipCode, city, country) {
     if (!name.current.value.trim()) {
@@ -92,6 +96,31 @@ function Checkout() {
       setError7(true);
       return false;
     }
+    if (!cartNum1.current.value.trim()) {
+      cartNum1.current.focus();
+      setError1(false);
+      setError2(false);
+      setError3(false);
+      setError4(false);
+      setError5(false);
+      setError6(false);
+      setError7(false);
+      setError8(true);
+      return false;
+    }
+    if (!cartNum2.current.value.trim()) {
+      cartNum2.current.focus();
+      setError1(false);
+      setError2(false);
+      setError3(false);
+      setError4(false);
+      setError5(false);
+      setError6(false);
+      setError7(false);
+      setError8(false);
+      setError9(true);
+      return false;
+    }
 
     return true;
   }
@@ -123,7 +152,7 @@ function Checkout() {
   }, []);
 
   function handleClick() {
-    const isValid = validate(name, email, phoneNumber, adress, zipCode, city, country);
+    const isValid = validate(name, email, phoneNumber, adress, zipCode, city, country, cartNum1, cartNum2);
     if (isValid) {
       data.counter = 1;
       const user = {
@@ -136,6 +165,8 @@ function Checkout() {
           zipCode:zipCode.current.value,
           city:city.current.value,
           country:country.current.value,
+          e_MoneyNumber:cartNum1.current.value,
+          e_MoneyPIN:cartNum1.current.value,
           payment:payC.current.checked && payC.current.defaultValue || payM.current.checked && payM.current.defaultValue 
         },
         product:[data]
@@ -175,6 +206,8 @@ function Checkout() {
       setError5(false);
       setError6(false);
       setError7(false);
+      setError8(false);
+      setError9(false);
       console.log(user);
       window.scrollTo({
         top: 0,
@@ -283,13 +316,13 @@ function Checkout() {
                   </div>
                 </div>
             
-                <div className={styles.inputGroup}>
+                <div className={error8 ? styles.inputError : styles.inputGroup}>
                   <label className={styles.label} htmlFor="floatingInput">e-Money Number</label>
-                  <input type="text" className={styles.input} id="floatingInput" placeholder="238521993"/>
+                  <input ref={cartNum1} type="text" className={styles.input} id="floatingInput" placeholder="238521993"/>
                 </div>
-                <div className={styles.inputGroup}>
+                <div className={error9 ? styles.inputError : styles.inputGroup}>
                   <label className={styles.label} htmlFor="floatingInput">e-Money PIN</label>
-                  <input type="text" className={styles.input} id="floatingInput" placeholder="6891"/>
+                  <input ref={cartNum2} type="text" className={styles.input} id="floatingInput" placeholder="6891"/>
                 </div>
               </form>
             {/* <checkText></checkText> */}
@@ -299,7 +332,7 @@ function Checkout() {
             <h1 className={styles.summaryTitle}>summary</h1>
             {
               cart && cart.map((el, index) => {
-                count += el.price;
+                count += el.price*el.counter;
                 return (
                   <div key={index} className={styles.summaryItems}>
                     <div className={styles.ItemsPrimary}>
@@ -315,7 +348,7 @@ function Checkout() {
                       </div>
                       <div className={styles.summaryDesc}>
                         <h2 className={styles.ItemTitle}>{el.name.slice(0, 4)}</h2>
-                        <p className={styles.ItemText}>$ {el.price / 1000}</p>
+                        <p className={styles.ItemText}>$ {(el.price / 1000) * el.counter}</p>
                       </div>
                     </div>
                     <p className={styles.ItemAmount}>x{el.counter}</p>

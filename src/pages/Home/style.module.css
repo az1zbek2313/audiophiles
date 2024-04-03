@@ -8,14 +8,13 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    border-top: 2px solid hsla(0, 0%, 100%, 0.4);
+    border-top: 1px solid hsla(0, 0%, 100%, 0.4);
 }
-.heroText{
-    width: 396px;
+.heroTexts{
+    max-width: 396px;
     display: flex;
     flex-flow: column;
-    align-items: start;
-    
+    align-items: start;   
 }
 .heroSpan{
     color: rgb(255, 255, 255);
@@ -23,6 +22,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 19px;
+    font-family: 'Manrope';
     letter-spacing: 10px;
     margin-bottom: 24px;
     text-align: left;
@@ -66,15 +66,18 @@
     background: rgb(251, 175, 133);
 }
 .heroImage{
-    background-image: url('../../assets/image/home/Bitmap-hero-speaker.jpeg');
+    background-image: url('../../assets/image/category/Bitmap.svg');
     background-repeat: no-repeat;
     border-radius: 5px;
     object-fit: scale-down;
-    background-position-y:-120px;
-    background-position-x:-40px;
+    background-position-y:-100px;
+    background-position-x:-20px;
+    /* background-size:110%; */
     width: 58%;
     height: 600px;
+    filter: brightness(0.9);
 }
+
 .homePage{
     max-width: 1110px;
     margin: 0 auto;

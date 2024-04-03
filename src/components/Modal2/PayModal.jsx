@@ -19,7 +19,7 @@ function PayModal({id}) {
     if (el.id === id) {
       count = el.counter 
     }
-    total += el.price
+    total += el.price*el.counter
   });
 
 
@@ -70,7 +70,7 @@ function PayModal({id}) {
               </div>
               <div className={styles.summaryDesc}>
                 <h2 className={styles.ItemTitle}>{data.name}</h2>
-                <p className={styles.ItemText}>$ {data.price / 1000}</p>
+                <p className={styles.ItemText}>$ {(data.price / 1000)*count}</p>
               </div>
             </div>
             <p className={styles.ItemAmount}>x{count}</p>
@@ -80,7 +80,7 @@ function PayModal({id}) {
 
         <div className={styles.orderBlack}>
           <h2 className={styles.orderBlackTitle}>GRAND TOTAL</h2>
-          <p className={styles.orderBlackText}>$ {total / 1000}</p>
+          <p className={styles.orderBlackText}>$ {(total+50000+1079) / 1000}</p>
         </div>
       </div>
 

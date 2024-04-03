@@ -59,7 +59,7 @@ function AddToCard() {
 
             {
               cart && cart.map((el, index) => {
-                count += el.price
+                count += el.price*el.counter
                 return (
                   <div key={index} className={styles.summaryItems}>
                     <div className={styles.ItemsPrimary}>
@@ -75,7 +75,7 @@ function AddToCard() {
                       </div>
                       <div className={styles.summaryDesc}>
                         <h2 className={styles.ItemTitle}>{el.name.slice(0, 4)}</h2>
-                        <p className={styles.ItemText}>$ {el.price / 1000}</p>
+                        <p className={styles.ItemText}>$ {(el.price / 1000)*(el.counter) }</p>
                       </div>
                     </div>
                     <p className={styles.ItemAmount}>x{el.counter}</p>

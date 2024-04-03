@@ -41,8 +41,8 @@ function App() {
         <Route path='/login' element={<Login setToken={setToken} />}></Route>
 
         {/* Protected Routes */}
-        <Route element={<Layout/>}>
-          <Route path='/' element={
+        <Route element={<Layout/>}>          
+        <Route path='/' element={
             <ProtectedRoute isAuthenticated={token ? true : false}>
                 <Home></Home>
             </ProtectedRoute>
