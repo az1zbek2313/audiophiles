@@ -10,6 +10,7 @@ import speaker2 from '../../assets/image/category/category-speaker2.svg'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { add } from '../../redux/TernarySlice'
+import { incrementByAmount } from '../../redux/conterSlice'
 
 function AddToCard() {
   let count = 0;
@@ -36,7 +37,7 @@ function AddToCard() {
       function handleClick() {
         dispatch(add(false));
         navigate(`/checkout/${params.id}`);
-        window.location.reload();
+        dispatch(incrementByAmount())
       }
 
       function Deleted() {
