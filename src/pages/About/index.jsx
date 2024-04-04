@@ -150,7 +150,7 @@ function About() {
               <span className={styles.heroSpan}>NEW PRODUCT</span>
               <h2 className={styles.heroTitle}>{data.name}</h2>
               <p className={styles.heroText}>{data.description}</p>
-              <h4 className={styles.price}>${data.price}</h4>
+              <h4 className={styles.price}>${data.price / 1000}</h4>
               <div className={styles.buttonGroup}>
                 <button  className={styles.button}>
                   <span

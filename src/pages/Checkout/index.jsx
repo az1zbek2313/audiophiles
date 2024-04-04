@@ -370,7 +370,7 @@ function Checkout() {
             </div>
             <div className={styles.summaryPrice}>
               <p className={styles.PriceText}>GRAND TOTAL</p>
-              <h2 className={styles.PriceTitle}>$ {+count/1000 + 50 + 1.079}</h2>
+              <h2 className={styles.PriceTitle}>$ { +50 + 1.079 + count/1000}</h2>
             </div>
 
             <button id="myButton" onClick={handleClick} className={styles.summaryButton}>CONTINUE & PAY</button>

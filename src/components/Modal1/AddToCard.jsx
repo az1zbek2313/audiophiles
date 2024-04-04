@@ -34,8 +34,9 @@ function AddToCard() {
 
 
       function handleClick() {
-        dispatch(add(false))
+        dispatch(add(false));
         navigate(`/checkout/${params.id}`);
+        window.location.reload();
       }
 
       function Deleted() {
