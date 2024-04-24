@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
-import selct from "../../assets/image/Path.svg";
 import headphones1 from "../../assets/image/category/category-headphones1.svg";
 import headphones2 from "../../assets/image/category/category-headphones2.svg";
 import headphones3 from "../../assets/image/category/category-headphones3.svg";
@@ -15,8 +14,9 @@ function PayModal({id}) {
   const [cart, setCart] = useState(localStorage.getItem('cart')?JSON.parse(localStorage.getItem('cart')):[])
   let count = 0;
   let total = 0;
+  console.log(17, cart);
   cart && cart.forEach(el => {
-    if (el.id === id) {
+    if (el.id == id) {
       count = el.counter 
     }
     total += el.price*el.counter
@@ -24,7 +24,7 @@ function PayModal({id}) {
 
 
   useEffect(() => {
-    fetch(`http://localhost:3000/data?id=${id}`)
+    fetch(`https://test-api-v7ua.onrender.com/data?id=${id}`)
     .then(res => res.json())
     .then(data => {
         setData(data[0]);

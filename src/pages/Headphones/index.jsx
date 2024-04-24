@@ -8,7 +8,7 @@ function Headphones() {
   const [data, setData] = useState([]);
   
   useEffect(() => {
-    fetch("http://localhost:3000/data?category=headphones")
+    fetch("https://test-api-v7ua.onrender.com/data?category=headphones")
     .then(res => res.json())
     .then(data => {
       setData(data);

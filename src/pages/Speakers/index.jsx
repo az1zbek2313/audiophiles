@@ -8,7 +8,7 @@ function Speakers() {
   const [data, setData] = useState([]);
   
   useEffect(() => {
-    fetch("http://localhost:3000/data?category=speakers")
+    fetch("https://test-api-v7ua.onrender.com/data?category=speakers")
     .then(res => res.json())
     .then(data => {
       setData(data);

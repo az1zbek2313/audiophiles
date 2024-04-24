@@ -70,7 +70,7 @@ function About() {
 
   useEffect(() => {
         
-    fetch(`http://localhost:3000/data?id=${params.id}`)
+    fetch(`https://test-api-v7ua.onrender.com/data?id=${params.id}`)
     .then(res => res.json())
     .then(d => {
       d[0].counter = counter;

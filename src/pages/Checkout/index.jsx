@@ -128,7 +128,7 @@ function Checkout() {
  
   useEffect(() => {
     // GET DATA 
-    fetch(`http://localhost:3000/data?id=${params.id}`)
+    fetch(`https://test-api-v7ua.onrender.com/data?id=${params.id}`)
     .then(res => res.json())
     .then(data => {
         setData(data[0]);
