@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AddToCard from "../components/Modal1/AddToCard";
-import { add } from "../redux/TernarySlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Layout() {
   const added = useSelector(state => state.add.value);
